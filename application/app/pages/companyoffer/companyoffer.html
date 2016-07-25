@@ -1,0 +1,146 @@
+
+
+
+<ion-navbar *navbar hideBackButton="true" gray>
+    <ion-row>
+        <ion-col width-25>
+            <button (click)="gotoProfile()" menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-col>
+
+<ion-col width-50>
+  
+           <center >
+        
+         <p style="color:white;" >Post  </p>
+             
+          </center>
+        
+
+</ion-col>
+
+<ion-col width-25>
+ <!--<buttonstyle="float:right">Apply</button>-->
+      <button  light clear small  (click)="onSubmit()" *ngIf="addButton"  style="float:right">Apply</button>
+</ion-col>
+    </ion-row>
+</ion-navbar>
+
+
+
+
+<ion-content padding class="buysell">
+
+  
+
+       <ion-row width-90 style=" background-color: #d8efe0;height:20%">
+            <ion-col width-40>
+                </ion-col>
+                 <ion-col width-40>         
+               <button  style="border-radius:100px; color:#00b16a;  border-width:2px;" secondary outline fab>
+                +</button>
+                 </ion-col>
+                 <ion-col width-20>
+                 </ion-col>
+            
+       </ion-row>
+    
+       
+       <ion-row width-90 style=" background-color: #d8efe0;">
+           <ion-item no-lines style=" background-color: #d8efe0;">
+              <center>
+           <h6 style="color:#00b16a;"> Upload Your Logo</h6>
+              </center>
+          </ion-item>
+       </ion-row>
+   
+       
+       
+       
+ 
+  <br />
+
+      
+<ion-list style="border: 3px solid #c06c84;">
+    <ion-item>
+         <ion-label style="color:#c06c84">CHOOSE</ion-label>
+        
+        <ion-select #ch [(ngModel)] ="data.categoryoffer">
+            <ion-option value="{{ch}}" *ngFor="#ch of categories"> {{ch}}</ion-option>
+            <!--[ngFormControl]='categoryoffer' name="categoryoffer"-->
+       </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<ion-row>
+ 
+    <ion-input style="background-color: #eef1f3; margin-top: 5px; color:#b1b1b1" type="text"
+    [(ngModel)] ="data.title" placeholder="Title"></ion-input>
+</ion-row>
+
+<ion-row>
+
+    <ion-input style="background-color: #eef1f3; margin-top: 5px; color:#b1b1b1" type="text" 
+     [(ngModel)] ="data.name" placeholder="Name"></ion-input>
+</ion-row>
+
+
+
+ <ion-row>
+    <ion-input style="background-color: #eef1f3; margin-top: 5px; color:#b1b1b1"
+   [(ngModel)] = "data.contactno" type="text" placeholder="Phone" full></ion-input>
+ </ion-row>
+
+<ion-row>
+     <ion-textarea  style="background-color: #eef1f3; margin-top: 5px; color:#b1b1b1" 
+      [(ngModel)] ="data.description" type="textarea" placeholder="Comment" full></ion-textarea>
+</ion-row>
+
+
+       
+
+
+
+
+
+</ion-content>
+
+<ion-toolbar position="bottom" gray>
+  
+ <ion-row width-90>
+      
+    <ion-buttons>
+      <button  (click)="gotopost()" royal>
+        <img src="images/offers_12.png">          
+      </button>
+    </ion-buttons>
+   <ion-buttons> 
+     <button (click)="gotooffer()" royal>
+    <img src="images/offers_03.png">        
+     </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotocategory()" royal>
+    <img src="images/offers_05.png">         
+    </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotobusiness()" royal>
+      <!--<ion-icon name="md-bus"></ion-icon>-->
+    <img src="images/offers_07.png">
+    </button>
+  </ion-buttons>
+
+    <ion-buttons >
+    <button (click)="gotovolunteer()" royal>
+    <img src="images/offers_09.png">    
+    </button>
+    </ion-buttons>
+  
+  </ion-row>
+  
+</ion-toolbar>  

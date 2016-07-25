@@ -1,0 +1,42 @@
+<ion-navbar *navbar gray>
+    <center>
+  <ion-title> <small>Validate Account </small></ion-title>   
+    </center>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-row width-90>
+     <p style="color: white; font-size:20px; font-weight:lighter; text-align: center; margin-top: 50px ">
+        <center>
+         You`re going to receive an email confirmation once you registered your account.
+         it also includes the activation code to confirm your account 
+        </center>
+     </p>
+  </ion-row>
+
+<ion-row width-100>  
+<ion-list no-lines>
+
+  <ion-item style="background-color: #957e90; ">
+    
+     <ion-input style="margin-left:35%; border-bottom-width:2px" type="text" placeholder="Input code here"></ion-input>
+  </ion-item>
+</ion-list>  
+</ion-row>
+
+<ion-row width-90>
+ 
+      <button  (click)="gotoprofile()" style="width: 250px; margin-left:50px;  margin-right:30px; height:50px; margin-top:50px; border-radius:10px; color:#8c7c8b;" light>FINISH</button> 
+       
+</ion-row>
+
+<ion-row width-50>
+  <button (click)="gotolanguage()" style="margin-left: 70px;
+           margin-top: 100px;
+           background-color:#8c7c8b" 
+           round light outline>
+           Resend Another Code
+           </button>
+</ion-row>
+    
+</ion-content> 

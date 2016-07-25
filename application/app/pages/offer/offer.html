@@ -1,0 +1,182 @@
+<ion-navbar *navbar hideBackButton="true" gray>
+    <button (click)="gotoProfile()" menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <center>
+        <ion-title>
+            <small>
+                Offers
+            </small>
+        </ion-title>
+    </center>
+</ion-navbar>
+
+<ion-content class="offer">
+
+    <div style="border:2px solid black;" padding>
+        <ion-segment [(ngModel)]="offers">
+            
+            <ion-segment-button  style="border:2px solid #957e90; color:#957e90;  border-radius:20px 0px 0px 20px" value="Discount">
+                <!--(click)="func1('Discount')"-->
+                Discount
+            </ion-segment-button>
+            <ion-segment-button  style="border:2px solid #957e90; color:#957e90;  border-radius:0px 20px 20px 0px" value="Lowest">
+                Lowest Price
+                <!--(click)="func2('Lowest')"-->
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <ion-content style="border:2px solid purple;">
+        <div style="border:2px solid yellow;">
+
+            <ion-slides pager  [ngSwitch]="offers" style="width:80%; border:2px solid red; margin:auto; box-shadow: 3px 3px 3px 3px grey;">
+
+                <ion-slide *ngFor="#offe of offer">
+                    <!--*ngIf="offe.categoryoffer=='Discount'"-->
+                    <ion-list  *ngSwitchWhen='offe.categoryoffer' no-lines>
+                        <ion-item>
+                            <img src="images/starbuck shop.jpg" alt="sorry" style="height:150px">
+                        </ion-item>
+                        <ion-item>
+                            <ion-item>
+                                <ion-item>
+                                    <ion-item style=" border-bottom:solid 2px #e47774; ">
+                                        <center>
+                                            
+                                            <h2>{{offe.title}}</h2></center>
+                                    </ion-item>
+                                </ion-item>
+                            </ion-item>
+                        </ion-item>
+                        <ion-item>
+                            <center>
+                                <p>
+                                    {{offe.description}}
+                                </p>
+                            </center>
+                        </ion-item>
+                    </ion-list>
+                </ion-slide>
+
+                <!--<ion-slide>
+  <ion-list no-lines>
+      <ion-item>
+   <img src="images/car1.jpeg" alt="sorry" style="height:150px">
+      </ion-item>xxxxx
+      <ion-item>
+            <ion-item>
+                <ion-item>
+                    <ion-item style=" border-bottom:solid 2px #e47774; ">
+                        <h2 style="text-align:center;"> Title </h2>
+                    </ion-item>
+                </ion-item>
+            </ion-item>
+      </ion-item>
+     <ion-item>
+   <p>
+      A class action blog focused on news, <br /> resources,
+      strategy, and the latest <br /> class action developments and 
+      trends. <br /> Read recent articles now!
+   </p>
+      </ion-item>
+  </ion-list>
+  </ion-slide>
+  
+  <ion-slide>
+  <ion-list no-lines>
+      <ion-item>
+   <img src="images/car1.jpeg" alt="sorry" style="height:150px">
+      </ion-item>
+      <ion-item>
+            <ion-item>
+                <ion-item>
+                    <ion-item style=" border-bottom:solid 2px #e47774; ">
+                        <h2 style="text-align:center;"> Title </h2>
+                    </ion-item>
+                </ion-item>
+            </ion-item>
+      </ion-item>
+     <ion-item>
+   <p>
+      A class action blog focused on news, <br /> resources,
+      strategy, and the latest <br /> class action developments and 
+      trends. <br /> Read recent articles now!
+   </p>
+      </ion-item>
+  </ion-list>
+  </ion-slide>
+  
+  -->
+  
+  
+   </ion-slides>
+  
+    <ion-slides pager [ngSwitch]="offers"  style="width:80%; margin:auto; box-shadow: 3px 3px 3px 3px grey;">
+
+  <ion-slide *ngFor="#offe of offer">
+  <!--*ngIf="offe.categoryoffer=='Lowest'"-->
+  <ion-list *ngSwitchWhen='offe.categoryoffer' no-lines>
+      <ion-item>
+   <img src="images/car3.png" alt="sorry" style="height:150px">
+      </ion-item>
+      <ion-item>
+            <ion-item>
+                <ion-item>
+                    <ion-item style=" border-bottom:solid 2px #e47774; ">
+                        <h2 style="text-align:center;"> {{offe.title}} </h2>
+                    </ion-item>
+                </ion-item>
+            </ion-item>
+      </ion-item>
+     <ion-item>
+   <p>
+    {{offe.description}}
+   </p>
+      </ion-item>
+  </ion-list>
+  </ion-slide>
+            </ion-slides>
+        </div>
+
+    </ion-content>
+</ion-content>
+
+
+<ion-toolbar position="bottom" gray>
+
+    <ion-row width-90>
+
+        <ion-buttons>
+            <button (click)="gotopost()" royal>
+                <img src="images/offers_12.png">
+            </button>
+        </ion-buttons>
+        <ion-buttons>
+            <button (click)="gotooffer()" royal>
+                <img src="images/offers_03.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotocategory()" royal>
+                <img src="images/offers_05.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotobusiness()" royal>
+                <!--<ion-icon name="md-bus"></ion-icon>-->
+                <img src="images/offers_07.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotovolunteer()" royal>
+                <img src="images/offers_09.png">
+            </button>
+        </ion-buttons>
+
+    </ion-row>
+
+</ion-toolbar>

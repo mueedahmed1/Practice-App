@@ -1,0 +1,95 @@
+<ion-navbar *navbar gray>
+    <center>
+        <ion-title> <small> Profile </small></ion-title>
+    </center>
+</ion-navbar>
+
+<ion-content class="home">
+    <ion-col style="float:left; background-color:#957e90;" width-100>
+        <center>
+            <ion-thumbnail item-left>
+                <img src="images/profile.png">
+            </ion-thumbnail>
+            <h3 style="color:white;">YILMAZ SATTI</h3>
+        </center>
+
+        <!-- <ion-card>
+  <img src="./../../../images/login.png"/>
+  <ion-card-content>
+    
+  </ion-card-content>
+</ion-card>-->
+
+        <ion-list>
+            <ion-row width-100>
+                <ion-item class="ions" full>
+                    <button light clear (click)="gotoaccount()" style="background-color:#957e90;">
+                        <img src="images/Profile-menu_03.png" width="20px">
+                        <h6 style="padding-left:10px;">    My Account </h6>
+                    </button>
+
+                </ion-item>
+            </ion-row>
+
+            <ion-row width-100>
+                <ion-item class="ions" full>
+                    <button light clear (click)="gotonotification()" style="background-color:#957e90;">
+                        <img src="images/Profile-menu_07.png" width="20px">
+                        <h6 style="padding-left:10px;">   Notifications </h6>
+                    </button>
+
+                </ion-item>
+            </ion-row>
+
+            <ion-row width-100>
+                <ion-item class="ions" full>
+                    <button light clear (click)="gotofavorite()" style="background-color:#957e90;">
+                        <img src="images/Profile-menu_11.png" width="20px">
+                        <h6 style="padding-left:10px;"> Favorite </h6>
+                    </button>
+
+                </ion-item>
+            </ion-row>
+
+            <ion-row width-100>
+                <ion-item class="ions" full>
+                    <button light clear (click)="gotocontact()" style="background-color:#957e90;">
+                        <img src="images/Profile-menu_15.png" width="20px">
+                        <h6 style="padding-left:10px;"> Contact Us </h6>
+                    </button>
+
+                </ion-item>
+            </ion-row>
+
+            <ion-row width-100>
+                <ion-item class="ions" full>
+                    <button light clear (click)="gotosetting()" style="background-color:#957e90;">
+                        <img src="images/Profile-menu_19.png" width="20px">
+                        <h6 style="padding-left:10px;">   Settings </h6>
+                    </button>
+
+                </ion-item>
+            </ion-row>
+
+        </ion-list>
+    </ion-col>
+
+
+    <ion-row width-100>
+        <ion-col width-90 style="margin:auto;">
+            <center>
+                <button outline light round style="width:200px" (click)="logout()">Logout</button>
+            </center>
+        </ion-col>
+    </ion-row>
+
+
+
+
+    <!--<ion-toolbar style="position: fixed;" position="bottom">
+  <center>
+      <ion-title>Footer</ion-title>
+  </center>
+</ion-toolbar>-->
+
+</ion-content>

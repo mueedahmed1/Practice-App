@@ -1,0 +1,115 @@
+<ion-navbar *navbar gray>
+    <center>
+        <ion-title> <small>Create Account </small></ion-title>
+    </center>
+</ion-navbar>
+
+<ion-content class="signup">
+<!--<form [ngFormModel]="myForm" (ngSubmit)="onSubmit(myForm.value)">-->
+    <ion-list inset>
+        <ion-row width-100>
+            <ion-item class="ions">
+                 <!--[ngFormControl]='username' name="username"-->
+                <ion-label><img src="images/Profile-menu_03.png" width="20px"></ion-label>
+                <ion-input type="text" [(ngModel)] ="data.username" placeholder="Username"></ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row width-100>
+            <ion-item class="ions">
+                <!--name="email" [ngFormControl]='email'-->
+                <ion-label><img src="images/sign_03.png" width="20px"></ion-label>
+                <ion-input type="text" [(ngModel)] ="data.email" placeholder="Email Address"></ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row width-100>
+            <ion-item class="ions">
+                <!--name="contactno" [ngFormControl]='contactno'-->
+                <ion-label><img src="images/sign_07.png" width="20px"></ion-label>
+                <ion-input type="text" [(ngModel)] ="data.contactno" placeholder="+90  |  Phone Number"></ion-input>
+            </ion-item>
+        </ion-row>
+
+        <ion-row width-100>
+            <ion-item class="ions">
+                <!--name="password" [ngFormControl]='password'-->
+                <ion-label><img src="images/login_03.png" width="20px"></ion-label>
+                <ion-input type="password"  [(ngModel)] ="data.password" placeholder="Password"></ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row width-100>
+            <ion-item class="ions">
+                <!--name="confirmpassword" [ngFormControl]='confirmpassword'-->
+                <ion-label><img src="images/login_03.png" width="20px"></ion-label>
+                <ion-input type="password"  [(ngModel)] ="data.confirmpassword" placeholder="Confirm Password"></ion-input>
+            </ion-item>
+        </ion-row>
+
+        <div padding>
+            <ion-row width-50>
+                <ion-segment  [(ngModel)] ="data.gender">
+                    <!--value="Male"-->
+                    <ion-segment-button style="border:2px solid white; color:white; border-radius:20px 0px 0px 20px;">
+                        Male
+                    </ion-segment-button>
+                    <!--value="Female"-->
+                    <ion-segment-button  style="border:2px solid white; color:white; border-radius:0px 20px 20px 0px;">
+                        Female
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-row>
+        </div>
+        <ion-row width-90>
+            <ion-col width-30>
+                <ion-item class="ions">
+                    <ion-input type="text" name="date" placeholder="Date"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col width-30>
+                <ion-item class="ions">
+                    <ion-input type="text"   name="month"  placeholder="Month"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col width-30>
+                <ion-item class="ions">
+                    <ion-input type="text" name="year" placeholder="Year"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+
+    <ion-row>
+        <button (click)="captureImage()" style="border-radius:50px; border-style:solid; border-width:2px;" light outline fab fab-center>+
+            <ion-thumbnail>
+                <img src="{{image}}">
+            </ion-thumbnail>
+        </button>
+    </ion-row>
+    <br />
+    <br />
+    <br />
+
+    <ion-row>
+        <ion-item style="background-color: #957e90;" no-lines>
+            <center>
+                <p style="color: white;">Profile photo</p>
+            </center>
+        </ion-item>
+    </ion-row>
+
+
+
+
+    <ion-toolbar style="position:fixed;  background-color: #957e90;" position="bottom" back>
+        <ion-row width-50>
+            <!--type="submit" id="addButton"  *ngIf="addButton"  [disabled]="!myForm.valid"-->
+            <button (click)="onSubmit()" *ngIf="addButton"  style="border-top-left-radius:2em; border-top-right-radius:2em; height:50px;" block light>
+                <h2 style="color:#8c7c8b;">Next </h2>
+            </button>
+        </ion-row>
+    </ion-toolbar>
+
+
+
+
+</ion-content>

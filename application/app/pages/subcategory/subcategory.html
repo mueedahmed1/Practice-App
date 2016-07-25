@@ -1,0 +1,60 @@
+<ion-navbar *navbar gray>
+  
+<center>
+  <ion-title>
+    SubCategory
+  </ion-title>
+</center>     
+</ion-navbar>
+
+<ion-content class="subcategory" style="background-image:url('images/CATEGORIES.png')">
+     
+  
+    
+  <div style="margin:auto">   
+   <ion-thumbnail *ngFor="#image of images;" style="float:left; width:33%;" (click)="gotoitem()">
+     <center> <img [src]='image.image1' style="height:70px;"  alt="sorry"/> </center>
+        <p style="color:white; text-align:center">{{image.title}}</p>
+   </ion-thumbnail>
+      </div>
+ 
+</ion-content>
+
+
+<ion-toolbar position="bottom" gray>
+  
+ <ion-row width-90>
+      
+    <ion-buttons>
+      <button  (click)="gotopost()" royal>
+        <img src="images/offers_12.png">          
+      </button>
+    </ion-buttons>
+   <ion-buttons> 
+     <button (click)="gotooffer()" royal>
+    <img src="images/offers_03.png">        
+     </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotocategory()" royal>
+    <img src="images/offers_05.png">         
+    </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotobusiness()" royal>
+      <!--<ion-icon name="md-bus"></ion-icon>-->
+    <img src="images/offers_07.png">
+    </button>
+  </ion-buttons>
+
+    <ion-buttons >
+    <button (click)="gotovolunteer()" royal>
+    <img src="images/offers_09.png">    
+    </button>
+    </ion-buttons>
+  
+  </ion-row>
+  
+</ion-toolbar>  

@@ -1,0 +1,98 @@
+<ion-navbar *navbar gray>
+    <center>
+        <ion-title>Items</ion-title>
+    </center>
+
+</ion-navbar>
+
+<ion-searchbar style="margin-top:-5px; margin-left:-10px; background-color: white;"></ion-searchbar>
+
+<ion-content class="buysell">
+
+
+    <div style="overflow: initial;">
+        <ion-list>
+            <ion-item *ngFor="#item of lists">
+
+
+                <ion-thumbnail item-left>
+                    <img src="images/1.png">
+                </ion-thumbnail>
+
+
+                <div>
+                    <div style="display: inline; float:right">
+                        <button (click)="gotodetail(item)" clear>Open</button>
+                    </div>
+                    <div style="display: inline; float:left">
+                        <h2><b>{{item.title}}</b></h2>
+                    </div>
+                </div>
+
+                <ion-row>
+                <div>
+                    <p style="color: green;">{{item.comment}}</p>
+                </div>
+                </ion-row>
+                <div>
+                    <div style="background-color:red; display:inline; float:left; width:35%">
+                        <center>
+                            <p>{{item.price}}</p>
+                        </center>
+                    </div>
+                    <div style="display:inline; border:1px solid lightgreen; float:right; padding:5px 5px 5px 5px; border-radius:1em 1em 1em 1em;">
+                        <p>{{item.contactno}}</p>
+                    </div>
+                </div>
+                <!--<ion-row>
+               <span item-right>{{item.price}}</span> 
+                <span item-left>{{item.phone}}</span>
+            </ion-row>
+                -->
+
+
+            </ion-item>
+
+
+        </ion-list>
+    </div>
+</ion-content>
+
+
+<ion-toolbar position="bottom" gray>
+
+    <ion-row width-90>
+
+        <ion-buttons>
+            <button (click)="gotopost()" royal>
+                <img src="images/offers_12.png">
+            </button>
+        </ion-buttons>
+        <ion-buttons>
+            <button (click)="gotooffer()" royal>
+                <img src="images/offers_03.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotocategory()" royal>
+                <img src="images/offers_05.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotobusiness()" royal>
+                <!--<ion-icon name="md-bus"></ion-icon>-->
+                <img src="images/offers_07.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotovolunteer()" royal>
+                <img src="images/offers_09.png">
+            </button>
+        </ion-buttons>
+
+    </ion-row>
+
+</ion-toolbar>

@@ -1,0 +1,62 @@
+<!--<ion-navbar *navbar>
+    
+</ion-navbar>-->
+
+<ion-content  class="home">
+
+<center><img src="images/login.png"  alt="sorry" /></center>
+
+<div>
+    
+<ion-list inset>
+
+ <ion-row width-100>
+ <ion-item style="border-bottom:2px ridge white;" class="ions">
+     <ion-label>
+   <img src="images/Profile-menu_03.png" width="30px">
+     </ion-label>
+    <ion-input type="text" placeholder="E-mail"></ion-input>
+  <!--[(ngModel)]="usercreds.email"-->
+  </ion-item>
+ </ion-row>
+   
+   <ion-row width-100>
+   <ion-item style="border-bottom:2px ridge white;" class="ions">
+    <ion-label><img src="images/login_03.png" width="20px">
+   </ion-label>
+    <ion-input  type="password"  placeholder="Pass"></ion-input>
+   <!--[(ngModel)]="usercreds.password"-->
+   </ion-item>
+   </ion-row>
+  
+  <ion-row width-100>
+      <ion-col width-90 style="margin:auto;">
+  <button class="button button-block" (click)=" gotoprofile()"  style="border-radius:50px; color:#8c7c8b; background-color:white;" >Sign in now!</button>
+      <!--(click)="login(usercreds)"-->
+      </ion-col>
+  </ion-row>
+ </ion-list>
+
+
+    <ion-row width-100>
+        <ion-col>
+            <button full class="button button-outline" style= "margin-left:-10px; border:2px solid #6fb1d4; color:#6fb1d4; border-top-right-radius: 2em; border-bottom-right-radius: 2em;">Login with facebook</button>
+        </ion-col>
+        
+        <ion-col>        
+            <button full class="button button-outline" style="margin-right:-10px; border:2px solid #d5848c; color:#d5848c; border-top-left-radius: 2em; border-bottom-left-radius: 2em;" >Login with Google+
+            </button>
+        </ion-col>
+    </ion-row>
+    
+    <ion-col width-100 style="text-align:center; color:Darkgrey">Don't have an account?<button style="margin-bottom: 15px; z-index:-5px " (click)="goto()" light clear small>Sign Up</button>
+       
+    </ion-col>
+    
+        </div>
+
+    
+    </ion-content>
+
+
+

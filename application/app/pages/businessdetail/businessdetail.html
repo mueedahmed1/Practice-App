@@ -1,0 +1,83 @@
+<ion-navbar hideBackButton="false" gray *navbar>
+
+    <center>
+        <ion-title>
+            <small>
+            Business Details
+            </small>
+        </ion-title>
+    </center>
+</ion-navbar>
+
+<ion-content  class="businessdetail">
+
+<ion-row style="height:13%">
+    <ion-col>
+        <img style="float:right;"  src="images/starbucks.png" height=50 width=50 alt="sorry">
+    </ion-col>
+    <ion-col style="padding:2%">
+        <h1>{{data.title}}</h1>
+    </ion-col>
+</ion-row>
+
+<ion-row  style="height:45%; margin-top:0%;">
+<img style="border-bottom-right-radius: 5em;" src="images/starbuck shop.jpg">
+</ion-row>
+
+<ion-row style="height:10%;">
+    <h1 style="color:darkgray; padding:0px 0px 0px 10px">Welcome {{data.title}}</h1>
+</ion-row>
+    
+ <ion-row style="height:25%; margin-top:0%">
+    <p style="color:darkgray; padding:0px 0px 0px 10px"> {{data.comment}}</p>
+ </ion-row>  
+  
+  <center>
+    <ion-row style="margin-top:1%; width:80%;">
+        <ion-col style="background-color:red;">
+           <b style="color:white;">  {{data.price}}</b>
+        </ion-col>
+        <ion-col style="background-color:green; border-radius:2em 2em 2em 2em;">
+           <b style="color:white"> {{data.contactno}}</b>
+            </ion-col>
+    </ion-row>
+  </center>
+</ion-content>
+
+<ion-toolbar position="bottom" gray>
+
+    <ion-row width-90>
+
+        <ion-buttons>
+            <button (click)="gotopost()" royal>
+                <img src="images/offers_12.png">
+            </button>
+        </ion-buttons>
+        <ion-buttons>
+            <button (click)="gotooffer()" royal>
+                <img src="images/offers_03.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotocategory()" royal>
+                <img src="images/offers_05.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotobusiness()" royal>
+                <!--<ion-icon name="md-bus"></ion-icon>-->
+                <img src="images/offers_07.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotovolunteer()" royal>
+                <img src="images/offers_09.png">
+            </button>
+        </ion-buttons>
+
+    </ion-row>
+
+</ion-toolbar>

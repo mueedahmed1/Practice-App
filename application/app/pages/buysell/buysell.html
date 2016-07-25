@@ -1,0 +1,179 @@
+<ion-navbar *navbar hideBackButton="true" gray>
+    <ion-row>
+        <ion-col width-25>
+            <button (click)="gotoProfile()" menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-col>
+
+        <ion-col width-50>
+
+            <center>
+
+                <p style="color:white;">Post your Buy and Sell </p>
+
+            </center>
+
+
+        </ion-col>
+
+        <!--<ion-col width-25>
+            <button light clear small style="float:right">Apply</button>
+        </ion-col>-->
+        <ion-col width-25>
+            <!--<buttonstyle="float:right">Apply</button>-->
+            <button light clear small (click)="onSubmit()" *ngIf="addButton" style="float:right">Apply</button>
+        </ion-col>
+    </ion-row>
+</ion-navbar>
+
+
+
+<ion-content padding class="buysell">
+
+
+
+    <h4 style="color:#6a677f">CHOOSE</h4>
+    <!--<form [ngFormModel]="myForm" (ngSubmit)="onSubmit(myForm.value)">-->
+
+        <ion-list style="border: 3px solid #c06c84;">
+            <ion-item>
+                <ion-label style="color:#c06c84">CATEGORY</ion-label>
+                <!--<ion-input type="text" value=""></ion-input>-->
+                <ion-select #ch [(ngModel)] ="data.category">
+                    <ion-option value="{{ch}}" *ngFor="#ch of categories">{{ch}}</ion-option>
+                    <!--<ion-option value="mot">Motors</ion-option>
+                [(ngModel)]="category"
+                <ion-option value="teach">Teaching</ion-option>
+                <ion-option value="comp">Computers</ion-option>
+                <ion-option value="anim">Birds & Animals</ion-option>
+                <ion-option value="job">Jobs & Services</ion-option>
+                <ion-option value="mob">Mobiles</ion-option>
+                <ion-option value="gift">Gifts</ion-option>
+                <ion-option value="mis">Miscellaneous</ion-option>
+                <ion-option value="salon">Salons</ion-option>
+                <ion-option value="fur">Furniture</ion-option>
+                <ion-option value="men">Men's need</ion-option>
+                <ion-option value="wom">Women's need</ion-option>
+                <ion-option value="child">Childern's need</ion-option>-->
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+
+        <ion-list style="border: 3px solid #6a677f;">
+            <ion-item>
+                <ion-label style="color:#6a677f">SUBCATEGORY</ion-label>
+                <!--<ion-input type="text" value=""></ion-input>-->
+                <ion-select #sub [(ngModel)] ="data.subcategory">
+                    <ion-option value="{{sub}}" *ngFor="#sub of subcategories">{{sub}}</ion-option>
+                    <!--<ion-option value="mot">Motors</ion-option>
+                <ion-option value="teach">Teaching</ion-option>
+                <ion-option value="comp">Computers</ion-option>
+                <ion-option value="anim">Birds & Animals</ion-option>
+                <ion-option value="job">Jobs & Services</ion-option>-->
+
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+
+
+        <!--<ion-row style="border:5px solid #a9dabb; height:150px" width-90> 
+  <p style="margin-top:5px; margin-left: 40px;  font-weight: bold;"></p>
+<br />
+
+    <button style="margin-top:20px; margin-left:-90px" outline fab yegreen>        
+        +
+     </button>
+     
+        
+</ion-row> -->
+
+        <ion-row width-100 style=" border:5px solid #a9dabb; height:20%">
+            <ion-row width-100>
+                <ion-item no-lines>
+                    <center>
+                        <p style="color:#6a677f;">
+                            Upload Your Images (3 images)
+                        </p>
+                    </center>
+                </ion-item>
+            </ion-row>
+        </ion-row>
+
+        <br />
+
+        <ion-row>
+               <!--[ngFormControl]="title"-->
+            <ion-input style="background-color: #eef1f3; margin-top: 5px;"  
+            [(ngModel)] ="data.title"  type="text" placeholder="Title"></ion-input>
+
+        </ion-row>
+
+        <ion-row>
+               <!--[ngFormControl]="comment"-->
+            <ion-input style="background-color: #eef1f3; margin-top: 5px;" 
+            [(ngModel)] ="data.comment" type="text" placeholder="Comment"></ion-input>
+
+        </ion-row>
+
+        <ion-row>
+
+               <!--[ngFormControl]="contactno"-->
+            <ion-input style="background-color: #eef1f3; margin-top: 5px;" 
+            [(ngModel)] ="data.contactno"  type="text" placeholder="Phone Number"
+            full></ion-input>
+
+        </ion-row>
+
+        <ion-row>
+            <!--[ngFormControl]="price"-->
+            <ion-input style="margin-top: 5px; color:grey; border: 3px solid green;" 
+              [(ngModel)] ="data.price" type="text" placeholder="Prize 0.00"
+            full></ion-input>
+
+        </ion-row>
+
+        
+
+   
+</ion-content>
+
+<ion-toolbar position="bottom" gray>
+
+    <ion-row width-90>
+
+        <ion-buttons>
+            <button (click)="gotopost()" royal>
+                <img src="images/offers_12.png">
+            </button>
+        </ion-buttons>
+        <ion-buttons>
+            <button (click)="gotooffer()" royal>
+                <img src="images/offers_03.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotocategory()" royal>
+                <img src="images/offers_05.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotobusiness()" royal>
+                <!--<ion-icon name="md-bus"></ion-icon>-->
+                <img src="images/offers_07.png">
+            </button>
+        </ion-buttons>
+
+        <ion-buttons>
+            <button (click)="gotovolunteer()" royal>
+                <img src="images/offers_09.png">
+            </button>
+        </ion-buttons>
+
+    </ion-row>
+
+</ion-toolbar>

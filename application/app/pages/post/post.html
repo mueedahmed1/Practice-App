@@ -1,0 +1,102 @@
+<ion-navbar *navbar hideBackButton="true" gray>
+   
+   <button (click)="gotoProfile()" menuToggle>
+    <ion-icon name="menu"></ion-icon>
+   </button>
+    
+    <center>
+  <ion-title>
+      <small>
+     Post
+      </small>
+  </ion-title>
+    </center>
+   
+ </ion-navbar>
+
+<ion-content class="post" style="background-image:url('images/CATEGORIES.png')">
+    
+   <!--<ion-tabs tabbarPlacement="bottom" gray>
+        <ion-tab  tabTitle="POST ADS" tabIcon="md-mail" [root]="chatroot"></ion-tab>
+        <ion-tab  tabTitle="OFFERS"  tabIcon="md-megaphone" [root]="chatRoot"></ion-tab>
+        <ion-tab  tabTitle="CATEGORIES"  tabIcon="md-cart" [root]="chatRoot"></ion-tab>
+        <ion-tab  tabTitle="SMALL BUSINESS"  tabIcon="md-bus" [root]="chatRoot"></ion-tab>
+    </ion-tabs>-->
+  
+      <button (click)="gotovolunteerpage()" style="height:24%; margin-top:1px" full volunteer large>
+          <img src="images/post_03.png" width="60" height="75" style="position: absolute; left:50px; top:40px; font-size: 3em;">
+          <!--<ion-icon style="position: absolute; left:30px; top:40px; font-size: 3em;" name="people"></ion-icon>-->
+          <h6 style="position: absolute; right:70px; top:30px;">volunteers<br /> team</h6>
+      </button>
+      
+      <button (click)="gotobuy()" style="height:24%; margin-top:1px" full sell large>
+          <img src="images/post_07.png" width="70" height="75" style="position: absolute; left:50px; top:40px; font-size: 3em;">
+          <!--<ion-icon style="position: absolute; left:30px; top:40px; font-size: 3em;" name="cart"></ion-icon>-->
+          <h6 style="position: absolute; right:70px; top:30px;">post something<br />for <br />buy or sell</h6>
+      </button>
+      
+      <button (click)="gotosmall()" style="height:24%; margin-top:1px" full idea large>
+         <img src="images/post_11.png" width="60" height="75" style="position: absolute; left:50px; top:40px; font-size: 3em;">
+          <!--<ion-icon style="position: absolute; left:30px; top:40px; font-size: 3em;" name="cash"></ion-icon>-->
+          <h6 style="position: absolute; right:70px; top:30px;">post your<br />small business <br/>idea</h6>
+      </button>
+      
+      <button (click)="gotocompany()" style="height:24%; margin-top:1px" full comp large>
+          <img src="images/post_15.png" width="60" height="75" style="position: absolute; left:50px; top:40px; font-size: 3em;">
+          <!--<ion-icon style="position: absolute; left:30px; top:40px; font-size: 3em;" name="megaphone"></ion-icon>-->
+          <h6 style="position: absolute; right:70px; top:30px;">post your<br />offer"company<br />offer"</h6>
+      </button>
+  
+  
+   
+      
+<!--<ion-toolbar style="position: fixed;" position="bottom" gray>-->
+    
+    <!--<ion-tabs style="position: fixed;" tabbarPlacement="bottom" gray>
+    
+        <ion-tab  tabTitle="POST ADS" tabIcon="md-mail" [root]="chatroot"></ion-tab>
+        <ion-tab  tabTitle="OFFERS"  tabIcon="md-megaphone" [root]="chatRoot"></ion-tab>
+        <ion-tab  tabTitle="CATEGORIES"  tabIcon="md-cart" [root]="chatRoot"></ion-tab>
+        <ion-tab  tabTitle="SMALL BUSINESS"  tabIcon="md-bus" [root]="chatRoot"></ion-tab>
+    </ion-tabs>-->
+
+</ion-content>
+
+
+<ion-toolbar position="bottom" gray>
+  
+ <ion-row width-90>
+      
+    <ion-buttons>
+      <button  (click)="gotopost()" royal>
+        <img src="images/offers_12.png">          
+      </button>
+    </ion-buttons>
+   <ion-buttons> 
+     <button (click)="gotooffer()" royal>
+    <img src="images/offers_03.png">        
+     </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotocategory()" royal>
+    <img src="images/offers_05.png">         
+    </button>
+   </ion-buttons>
+   
+   <ion-buttons>
+    <button (click)="gotobusiness()" royal>
+      <!--<ion-icon name="md-bus"></ion-icon>-->
+    <img src="images/offers_07.png">
+    </button>
+  </ion-buttons>
+
+    <ion-buttons >
+    <button (click)="gotovolunteer()" royal>
+    <img src="images/offers_09.png">    
+    </button>
+    </ion-buttons>
+  
+  </ion-row>
+  
+</ion-toolbar>   

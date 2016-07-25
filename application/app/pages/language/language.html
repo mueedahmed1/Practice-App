@@ -1,0 +1,102 @@
+<ion-navbar hideBackButton="false" gray *navbar>
+    <center>
+        <ion-title>
+            <small>Language Select</small>
+        </ion-title>
+    </center>
+</ion-navbar>
+
+<ion-content class="language">
+
+    <ion-row width-100>
+        <ion-col width-90 style="margin:auto;">
+            <center>
+                <button outline light round style="width:200px">Turkce</button>
+            </center>
+        </ion-col>
+    </ion-row>
+
+    <ion-row width-100>
+        <ion-col width-90 style="margin:auto;">
+            <center>
+                <button outline light round style="width:200px">English</button>
+            </center>
+        </ion-col>
+    </ion-row>
+
+    <ion-row width-100>
+        <ion-col width-90 style="margin:auto;">
+            <center>
+                <button outline light round style="width:200px">Arabi</button>
+            </center>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row style="height:10%; margin-top:5%;">
+        <button fab light fab-center></button>
+    </ion-row>
+
+
+    <ion-row>
+        <!-- style="margin-top:5%;  border: 1px solid black; height:2%;"-->
+        <ion-item style="background-color:#957e90; margin-top:1.5%" no-lines>
+            <center>
+                <p style="color: white;">TURKEY</p>
+            </center>
+        </ion-item>
+    </ion-row>
+
+    
+        <ion-list width-50 inset>
+            
+            
+                <ion-item class="ion">
+                    <ion-label>Province</ion-label>
+                    <ion-select [(ngModel)]="province">
+                        <ion-option value="s">Sindh</ion-option>
+                        <ion-option value="p">Punjab</ion-option>
+                        <ion-option value="b">Baluchistan</ion-option>
+                        <ion-option value="k">KPK</ion-option>
+                    </ion-select>
+                </ion-item>
+          
+            
+            
+                <ion-item class="ion">
+                    <ion-label>District</ion-label>
+                    <ion-select [(ngModel)]="district">
+                        <ion-option value="a">Attock</ion-option>
+                        <ion-option value="b">Bahawalpur</ion-option>
+                        <ion-option value="l">lodhran</ion-option>
+                        <ion-option value="m">Multan</ion-option>
+                        <ion-option value="o">Okara</ion-option>
+                    </ion-select>
+                </ion-item>
+            
+            
+           
+                <ion-item class="ion">
+                    <ion-label>Neighbourhood</ion-label>
+                    <ion-select [(ngModel)]="neighbour">
+                        <ion-option value="a">Afghanistan</ion-option>
+                        <ion-option value="i">India</ion-option>
+                        <ion-option value="i">Iran</ion-option>
+                        <ion-option value="c">China</ion-option>
+                    </ion-select>
+                </ion-item>
+           
+        </ion-list>
+    
+
+
+
+    <ion-toolbar style="position:fixed;" position="bottom" back>
+        <ion-row width-50>
+            <button (click)="next()" style="border-top-left-radius:2em; border-top-right-radius:2em; height:50px;" block light>
+                <h2 style="color:#8c7c8b;">Next </h2>
+            </button>
+        </ion-row>
+    </ion-toolbar>
+    <!--background-color: #957e90;-->
+</ion-content>
